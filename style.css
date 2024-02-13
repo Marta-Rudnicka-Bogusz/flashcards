@@ -1,0 +1,52 @@
+body {
+    background: url(globe.png);
+    background-size: contain;
+}
+.container div {
+    width: 150px;
+    height: 150px;
+   /*opacity: 0.7;*/
+}
+.lemon-regular {
+    font-family: "Lemon", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lemon', serif;
+}
+p {
+    text-align: center;
+    font-family: 'Lemon', serif;
+    color: black;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 75px;
+    justify-content: space-around;
+    /*align-content: space-around;*/
+}
+.front, .back {position: absolute;
+}
+.card { position: relative;
+        transition: all 2s linear;
+        transform-style: preserve-3d;}
+
+.front {background: linear-gradient(sandybrown, rosybrown);
+        z-index: 2;
+        backface-visibility: hidden;}
+
+.back { background: linear-gradient(darkgrey, darkslategrey);
+        z-index: 1;}
+
+.card:hover {transform: rotateY(180deg);
+
+}
+
+.back {transform: rotateY(180deg);
+       }
